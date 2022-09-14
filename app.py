@@ -13,7 +13,7 @@ from home import home
 app = Flask(__name__, static_folder='../static')
 
 app.config['SECRET_KEY'] = 'secret_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///home/alulu/Flask-Login-Register/database_file/database.db'
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -31,4 +31,4 @@ def load_user(user_id):
     return Users.query.get(int(user_id))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=5000)
